@@ -1,0 +1,7 @@
+-lib react-next
+-cp src
+-cp test/src
+--macro include('dnd.core', true)
+--macro include('react.dnd', true)
+-main Main
+-js bin/test.js

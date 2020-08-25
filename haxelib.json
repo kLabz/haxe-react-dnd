@@ -1,0 +1,16 @@
+{
+  "name": "react-dnd",
+  "description": "Externs for react-dnd",
+  "version": "0.1.0",
+  "releasenote": "Initial release",
+  "url": "https://github.com/kLabz/haxe-react-dnd",
+  "license": "MIT",
+  "tags": [],
+  "classPath": "src",
+  "contributors": [
+    "klabz"
+  ],
+  "dependencies": {
+    "react-next": ""
+  }
+}

@@ -1,0 +1,10 @@
+-lib react-next:1.121.0
+-lib js-object:0.0.7
+-lib html-entities:1.0.0
+
+# Freeze tink versions
+-lib tink_anon:0.4.1
+-lib tink_core:1.24.0
+-lib tink_hxx:0.22.3
+-lib tink_macro:0.18.0
+-lib tink_parse:0.3.0

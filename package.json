@@ -1,0 +1,15 @@
+{
+	"devDependencies": {
+		"esbuild": "0.6.27"
+	},
+	"scripts": {
+		"postinstall": "haxelib newrepo && haxelib install --always --skip-dependencies install.hxml",
+		"build": "haxe build.hxml",
+		"pack": "npx esbuild bin/test.js --bundle --outfile=bin/bundle.js",
+		"test": "npm run build && npm run pack && node bin/bundle.js"
+	},
+	"dependencies": {
+		"react": "16.13.1",
+		"react-dnd": "11.1.3"
+	}
+}
