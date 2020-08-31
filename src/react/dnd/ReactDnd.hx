@@ -7,8 +7,6 @@ import dnd.core.DragDropManager;
 import dnd.core.Identifier;
 import dnd.core.TargetType;
 
-import react.ReactType.ReactTypeOf;
-
 @:jsRequire("react-dnd") @valueModuleOnly
 extern class ReactDnd {
 	/**
@@ -20,13 +18,6 @@ extern class ReactDnd {
 		Create the React Context
 	**/
 	static final DndContext:ReactContext<DndContextType>;
-
-	/**
-		A React component that provides the React-DnD context
-	**/
-	static final DndProvider:ReactTypeOf<DndProviderProps<Dynamic, Dynamic>>;
-
-	static final DragPreviewImage:ReactTypeOf<DragPreviewImageProps>;
 
 	/**
 		useDragSource hook
@@ -51,9 +42,22 @@ extern class ReactDnd {
 	/**
 		Decorates a component as a dragsource
 	**/
-	static function DragSource<RequiredProps, CollectedProps, DragObject>(type:ts.AnyOf3<String, Symbol, (props:RequiredProps) -> Identifier>, spec:DragSourceSpec<RequiredProps, DragObject>, collect:DragSourceCollector<CollectedProps, RequiredProps>, ?options:DndOptions<RequiredProps>):DndComponentEnhancer<CollectedProps>;
+	static function DragSource<RequiredProps, CollectedProps, DragObject>(
+		type:ts.AnyOf3<String, Symbol, (props:RequiredProps) -> Identifier>,
+		spec:DragSourceSpec<RequiredProps, DragObject>,
+		collect:DragSourceCollector<CollectedProps, RequiredProps>,
+		?options:DndOptions<RequiredProps>
+	):DndComponentEnhancer<CollectedProps>;
 
-	static function DropTarget<RequiredProps, CollectedProps>(type:ts.AnyOf4<String, Symbol, Array<Identifier>, (props:RequiredProps) -> TargetType>, spec:DropTargetSpec<RequiredProps>, collect:DropTargetCollector<CollectedProps, RequiredProps>, ?options:DndOptions<RequiredProps>):DndComponentEnhancer<CollectedProps>;
+	static function DropTarget<RequiredProps, CollectedProps>(
+		type:ts.AnyOf4<String, Symbol, Array<Identifier>,(props:RequiredProps) -> TargetType>,
+		spec:DropTargetSpec<RequiredProps>,
+		collect:DropTargetCollector<CollectedProps, RequiredProps>,
+		?options:DndOptions<RequiredProps>
+	):DndComponentEnhancer<CollectedProps>;
 
-	static function DragLayer<RequiredProps, CollectedProps>(collect:DragLayerCollector<RequiredProps, CollectedProps>, ?options:DndOptions<RequiredProps>):DndComponentEnhancer<CollectedProps>;
+	static function DragLayer<RequiredProps, CollectedProps>(
+		collect:DragLayerCollector<RequiredProps, CollectedProps>,
+		?options:DndOptions<RequiredProps>
+	):DndComponentEnhancer<CollectedProps>;
 }
