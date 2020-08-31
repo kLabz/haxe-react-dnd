@@ -21,7 +21,7 @@ typedef DropTargetSpec<Props> = {
 		called if canDrop() is defined and returns false.
 	**/
 	// TODO: get rid of Dynamic
-	@:optional dynamic function drop(props:Props, monitor:DropTargetMonitor, component:ReactType):Dynamic;
+	@:optional dynamic function drop(props:Props, monitor:DropTargetMonitor, component:Dynamic):Dynamic;
 
 	/**
 		Optional.
@@ -32,7 +32,7 @@ typedef DropTargetSpec<Props> = {
 		method will be called even if canDrop() is defined and returns false.
 		You can check monitor.canDrop() to test whether this is the case.
 	**/
-	@:optional dynamic function hover(props:Props, monitor:DropTargetMonitor, component:ReactType):Void;
+	@:optional dynamic function hover(props:Props, monitor:DropTargetMonitor, component:Dynamic):Void;
 
 	/**
 		Optional.
