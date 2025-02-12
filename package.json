@@ -1,6 +1,6 @@
 {
 	"devDependencies": {
-		"esbuild": "0.6.27"
+		"esbuild": "0.25.0"
 	},
 	"scripts": {
 		"postinstall": "haxelib newrepo && haxelib install --always --skip-dependencies install.hxml",
